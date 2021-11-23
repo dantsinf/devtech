@@ -2,7 +2,7 @@ package emAula.src;
 
 public class Produto {
         private String cod;
-        private String descricao;
+        public String descricao;
         private int qtde;
 
         public Produto(String c, String d, int q){
