@@ -1,4 +1,7 @@
-package emAula.src;
+package emAula.src.Produto;
+
+import emAula.src.Produto;
+import emAula.src.ProdutoPerecivel;
 
 public class TestaProdutos {
     public static void main(String[] args) {
