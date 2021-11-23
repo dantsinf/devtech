@@ -34,7 +34,7 @@ public class ProdutoPerecivel extends Produto{
     /*Não necessário sobrescrever a original. Se não, temos ocmportamento inconsistente.*/
 
     public void colocaEstoque(int n){
-        colocaEstoque((n, LocalDate.now());
+        colocaEstoque(n, LocalDate.now());
     }
 
 
