@@ -1,4 +1,4 @@
-package emAula.src;
+package emAula.src.Produto;
 
 public class Produto {
         private String cod;

@@ -1,8 +1,8 @@
-package emAula.src;
+package emAula.src.Produto;
 
 import java.time.*;
 
-public class ProdutoPerecivel extends Produto{
+public class ProdutoPerecivel extends Produto {
     private LocalDate dataValidade;
 
     public ProdutoPerecivel(String c, String d, int q, LocalDate dt){
