@@ -47,4 +47,8 @@ public class Quadrado implements PrimitivaGrafica {
         return p2;
     }
 
+    public String toString() {
+        return "Chamou quadrado";
+    }
+
 }

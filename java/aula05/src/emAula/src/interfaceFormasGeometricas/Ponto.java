@@ -26,10 +26,10 @@ public class Ponto implements PrimitivaGrafica {
         return (y);
     }
 
-    public String toString(){
+    /*public String toString(){
         String str = "(" + x + "," + y + ")";
         return str;
-    }
+    }*/
 
     public double area(){
         return 0;
@@ -37,14 +37,15 @@ public class Ponto implements PrimitivaGrafica {
 
     public void setEspessura(int e){
         if (e>0)
-            espessura = 0;
+            espessura = e;
     }
 
     public String getNome(){
         return ("Ponto");
     }
 
-
-
-
+    public String toString() {
+        return "Chamou ponto";
     }
+
+}

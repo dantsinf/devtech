@@ -39,4 +39,8 @@ public class Circulo implements PrimitivaGrafica {
         return espessura;
     }
 
+    public String toString() {
+        return "Chamou circulo ";
+    }
+
 }
