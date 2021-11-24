@@ -49,6 +49,7 @@ public class CadastroDePrimitivas {
         for(PrimitivaGrafica pr:cad){
             System.out.println("Nome: " + pr.getNome());
             System.out.println("Area: " + pr.area());
+            System.out.println(pr);
         }//fecha for
 
     }
