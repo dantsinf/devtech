@@ -1,1 +1,1 @@
-## Aula 05, sobre Herança, Polimorfismo
+## Aula 05, sobre Herança, Polimorfismo, Exceção
