@@ -27,6 +27,17 @@ public class TesteExcecoesComTratamento {
     }//testa
 
     public static void main(String[] args) {
+        System.out.println("Teste POlimorfismo 1:");
+        testa("TestePolimorfismo", "Excecoes","4");
+
+        System.out.println("TestaPolimorfismo 2:");
+        testa("TestePolimorfismo", "Excecoes","10");
+
+        System.out.println("TestaPolimorfismo 3:");
+        testa("TestePolimorfismo", "Excecoes","TestaPOlimorfismo");
+
+        System.out.println("TestaPolimorfismo 4:");
+        testa("TestePOlimorfismo");
 
     }
 
