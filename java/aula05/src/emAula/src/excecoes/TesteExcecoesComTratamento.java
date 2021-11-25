@@ -5,6 +5,7 @@ public class TesteExcecoesComTratamento {
     public static void testa(String ...args){
         ImpString s1 = null, s2 = null;
         int n = 0;
+        //exceções são try, catch
         try{
             s1 = new ImpString(args[0]);
             s2 = new ImpString(args[1]);
