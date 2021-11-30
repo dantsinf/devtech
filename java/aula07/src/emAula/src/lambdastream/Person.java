@@ -1,4 +1,4 @@
-package emAula.src;
+package emAula.src.lambdastream;
 
 public class Person {
     public enum Sex{ MALE,FEMALE }
