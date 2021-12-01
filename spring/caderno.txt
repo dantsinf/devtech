@@ -1,0 +1,80 @@
+09/11/2021
+trilha Spring Web
+
+- contexto Java para Web, arquitetura baseada em servi;o
+- subconjunto do framework que é o Spring
+- Arquitetura orientada a serviços, trabalhada desde 1996 
+- serviço é um softwarte que está executando na rede que vai receber uma demanda atrávez de uma mensagem
+- APi é o comando de um software
+- APIxSpring
+- Api é um comando que tu chama, a interface da aplicação
+Camada de serviços, Web Services: 
+- WebxInternet?  Internet surge antes da web
+- um monte de p´redio que tinha que se conctar entre si, agora eles se comunicam, lá em outra ciade também queriam trocar informação entre si. A gente podia conectar essas cidadas e fazer uma grande rede mundial, aí veio um monte de equipamento e protocolo que começou a ligar essas redes umas na outra e surgiu a internet, a internet é entre redes, quando a gente termina o protocolo IP isso é internet é uma conecxão entre redes, agora eu tenho um computadore conectados entre si que podem trocar dados entre si. Nesse momento não existe página web, email, só existe computadores conectados e trocando dados emtre si. Então dentro da internet se construiu o email
+- Quando tu manda uma mensagem por email, para o Lucas por exemplo, essa sai daqui e descobre que o Lucas está lá. Então dentro da internet se construiu o serviço de email, tipo pop, smtp são protocolos de trocas de mensagem.
+- http é  protocolo que a gente usa para achar um documento, trocar informa~ções entre documentos
+- WEeb serviçe é uma forma que implementar serviços dentro desse cntexto usando os protocolos
+- O que é protocolo? como vamos trocar mensagem. Se eu vou trocar mensagem com alguém a gente vai combinar uma forma de fazer isso, exemplo, tu combina com um amigo que vai entregar uma mensagem em um banquinho todo o dias às 14h da tarde e que a mensagem tem um X, então todo o dia ele busca aa mensagem e se não tiver o X ele não vai pegar para ler, protocolo é isso qualquer um que sabe ele pode pegar a carta.
+- Protocolo são regras de como vamos trocar mensagens
+- Protocolo pro web services é o HTTP.
+- Protocolo baseado em mansegem de requisição, resposta. O serviço está em estado de espera, alguém rte faz uma requisição
+- A requisição é do cliente a resposta do servidor
+- HTTP tem um conjunto de ações, quando tu constrroe uma requisição tem que falar qual a açar que ela vai ter (GET,SET, POST)
+- GET: não é obrigatório ter um corpo no request/requisição,
+- POST: precisa de corpo/terxto
+- Quando vem uma resposta de GET, POST, DELETE precisa de corpo
+- GET, POST, DELETE, PUT: Na requisição o POST e PUT tem, na resposta todos tem
+WEB SERVICES/ REST:
+- HTTP x HTTPs: no HTTP se for texto, por exemplo, e tivermos em rede de familiares a gente enxerga o texto passado, o HTTPs tem mais segurtança em criptografia, certificados o texto que passa ali, nosso protocolo é textural então o que passa é texto. A regra é a mesma são dois protocolos textuais, mas no HTTPS o texto está escopndido/guardado/certificado
+- REST é baseados no protoclo HTTP/HTTPS
+- JSON é o queridinho agora, e não mais o XML
+- Swagger
+SPRING FRAMEWEWORK, WEB SERVICES:
+-  o que são controllers? são componentes java, objetos java, ultilizados para tratar às requisições HTTP
+- Tudo que vier dos nossos clientes é codificado com mensagem HTTP
+- Spring quickstart é nosso primeiro projeto no spring, a finalidade aqui é o ambiente pronto
+- spring tools
+- pediu pra escolhermos uma IDE e seguirmos nela
+
+
+10/11/2021
+paramos na trilha: Controller
+- start.spring.io/
+- Usamos o Controller para trantar requisições HTTP
+- Existe mais de um tipo de Copntroller no Spring o que vamos usar é o RestController e como lidar
+
+11/11/2021
+- Spring MVC-Dispatcher
+- O que é @RestController? é uma anotação que indica que uma classe é o controle
+
+
+- controle de requisição tipo REST é com o RestController
+- Caracteristica do RestController é ter mapeamento
+- além de dados os requests podem retornar status
+- chave é atributo. valor é o conteúdo
+- GET é um método
+- variável é chave
+#quando pega valor de uma chave está mapeando
+- quem da signifcado ao metodo somos nós
+- tudo que vem da url, vai para no método
+-
+
+18/11/2021
+- DTO?
+- DTO? Padrões de projeto
+- o codigo java come;a sempre no Main
+- main chama Spring
+- Trow = monta o objeto e devolve para quem chamou
+- request  é alguem mandou um request
+- falou sobre erros ex.: 404
+- falei que não estava me sentindo tão confiante e queria revisar. O sor me disse que era para eu serguir com as aulas e não revisar
+
+23/11/2021
+- Como o spring acha o @REstController? tem umos um servidor web que carrega nossa aplicação
+-componentes? todas as classes que estão anotadas
+- mensagem = request http
+- post, delete.. chega no servidor web, que nessa parte está sendo controlado pelo Spring
+- CORS? é um mecanismo dos navegadores,
+- Spring é a origem da requisição HTTP
+- ComponentexBin? Dentro do componente tem o bin, o componente faz mais coisas. 
+- como funciona a web? maquinas pedindo páginas e maquinas mandando página 
