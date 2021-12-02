@@ -38,16 +38,118 @@ SPRING FRAMEWEWORK, WEB SERVICES:
 
 
 10/11/2021
-paramos na trilha: Controller
 - start.spring.io/
-- Usamos o Controller para trantar requisições HTTP
-- Existe mais de um tipo de Copntroller no Spring o que vamos usar é o RestController e como lidar
+APÓS O GUIDE QUISKTART
+- aula passada vimos o quickstarter
+- Spring boot simplifica o projeto
+- quando vem uma resuisição, essa requisição entra em uma porta e cai em um servidor web
+- os @ são anotações que o spring framework olha para saber o que fazer
+- @springbootapplication anotação significa que a aplicação começa aqui
+EM UM EXEMPLO:
+- o /hello é uma requisição e antes dele é um método que vai trata-lo
+- o que é localhost minha máquina local
+- localhost:8080/hello vai parar no srvidor web
+- quando aparece o Hello World! significa que tem alguem fazendo GET maping hellow? sim, então entrega
+- quando dá erro foi porque o spring não achou o mapeamento
+- o método GET passa pela URL
+- value é a chave
+# quando da página não existe não tem servidor web rodando
+- format funciona igual o printf no java
+exemplo: "Hello %s", name
+- "Hello %s" é a máscara da String
+- name é as variáveis a seram impressas
+- na URL tu mexe nas chaves/variáveis
+- @getmaping("/hello") esse gatmaping  trata o valor hello
+- em value é o request também 
+- @getmaping("/hello")
+- falou do postman
+- o que aparece na URL é o formato da requisição HTTP
+- nome do parâmetro é a chave
+- aqui tu passaa chave e valor
+- pelo nome da chave tu diz que vai cair em tal coisa no java
+- GET é uma query
+PORM.xml:
+- nele configurando
+- pacote é dependÊncia
+- o pacote principal é em <artifacId>
+- a versão do java tu pode mudar em <java.version>
+ORGANIZAÇÃO DAS CLASSES:
+- package conta signigica que conta, está no pacote conta
+- pacote é uma pasta
+- o nosso código jva é colocado dentro de um pacote
+- o spring cria uma pasta fonte, main e teste
+- main tem recursos da web
+- o Maven organiza o spring assim fonte, main e teste
+-  pacote e pasta tem que ta igual no começo o spring cria e temos que ir mantendo
+- o mkdir cria pastas em disco
+- antes do windows era o DOS, não existia a parte gráfica
+- falou de comandos básicos do DOS
+- DOSxPowerShell
+- a tendência é que usamos o POwerShell daqui para frente
+POCOTES:
+- o sor gosta do Ubunto
+- WSL do windows 10 a diante, eu é um subsistema linux dentro do windows
+- Windows subsystem for Linux
+ALGUMAS ANOTAÇÕES DO SPRING:
+cONTROLLERS:
+- usamos controllers para tratar requisição HTTP
+- RestController?
+- postman perquite que postamos coisas
+- pode usar o INSOMIA
 
 11/11/2021
 - Spring MVC-Dispatcher
-- O que é @RestController? é uma anotação que indica que uma classe é o controle
+- Maven carrega o servidor web
+- Podemos ter um ou mais controller
+- maven dispara o Main, o Main faz le roda nossa classe que é Spring Apliccation
+- se o Main terminou o que está rodando? o Spring
+- tu pode criar varias classes e criar um GETMAPING
+- arquitetura de serviço é como ta organizado as coisas
+- Main padrão que dispara nossa classe Spring Boot
+- o nome da classe tem que ser controller? mas comumente terminamos com controller no nome da classe
+- static é um atributo de classe
+- final não pode ser modificado
+- atomic longer me garante conflito
+CONTROLLERS:
+- controllers são classes java que tratam http
+- restcontroller trata o rest
+ANOTAÇÕES PARA MAPEAMENTO
+- restcontroller tem que ter mapeamento
+- quando tem uma requisição post temos que fazer um método para tratar POST e assim por diante
+- o HTTP só aceita texto
+- quando tu manda um objeto a prorpia Spring converte para JSON
+- os alunos relataram que nas máquinas da SICREDI o POSTMAN só funciona offline, aí começaram a usar o INSOMIA
+EXERCÍCIOS
+- a) O que é @RestController? é uma anotação que indica que uma classe é o controle REST, é atravez disso que o String sabe que a classe está preparada para receber requisição
+- b) o que é @RequestMaping? é uma forma de fazer mapeamento, tem suas anotação PostMaping, GetMaping, etc. Cada vez menos se usa RequestMapin pois é mais verboso e menor legivel. GetMapping vira um RequestMaping por "baixo dos panos"
+- quem dá signifcado a esses métodos é nós, pois eu implemento o método
+- c) @RequestParam? ele mapea o parametro que vem para request para o método. Cada parâmetro que tu quer mapear. Tudo aquilo que vem da URL vai parar no método desde que eu faça o mapeamento e o RequestParam faz isso.
+exemplo: public Greeting greeting(@RequestParam(value = "name", defaultValue = "world") Spring name)
 
+explicando o exemplo:
+1) abaixo é java
+public Greeting greeting(Spring name)
+2) tu tens que dizer para o Spring o que tu coloca no name, então adicionas a linha do RequestParam. Isso é um tipo de ingesão de indeêndencia
+public Greeting greeting(@RequestParam(value = "name", defaultValue = "world") Spring name)
+minuto 39:24
 
+outro exemplo:
+public Greeting greeting(@RequestParam(value = "name", defaultValue = "world") Spring meu_parametro)
+Não é pelo fato de uma chave ser name para o outro ser name, é o Requestparam que liga, e diz essa chave name vai cair no parâmetro que está ao lado.
+
+- o que significa ser um POST?, significa que um método não é obirgatório mas tem que ter corpo, os dados vão no corpo mas de que forma? Vão no corpo no formado JSON. o que o código espera receber são os atributos
+- QUando tu manda um número de dados maior tu manda pelo corpo não no cabeçalho
+- O que faz um PUT? Um PUT vai modificar, tu vai passar os dados e ele vai alterar os estudantes registrados(o exemplo do professor)
+- DELETE? Deleta
+- Java é uma linguagem universal
+- Lembrando: o spring carraga todos os controllers para depois fazer mapeamento 
+- nas classes de negócio terá GET e SET
+- o delete remove um registro
+- a @RestController subistitui @ResponseBody
+- Por que alguns metodos não tem @RequestParam, pois eles não tem parâmetros, ele só diz me dá os estudantes e volta tudo
+- quando as classes estão em outro pago tu tens que importar, aí tu excreve um import e o caminho
+- O PUT além do cabeçalho vem um corpo, o RequestBOry joga o JSON para dentro de Student(o exemplo do professor)
+- aqui estamos programando para web, vocês entenderam protocolo HTTP, relação do servidor com Spring  
 - controle de requisição tipo REST é com o RestController
 - Caracteristica do RestController é ter mapeamento
 - além de dados os requests podem retornar status
@@ -57,9 +159,14 @@ paramos na trilha: Controller
 #quando pega valor de uma chave está mapeando
 - quem da signifcado ao metodo somos nós
 - tudo que vem da url, vai para no método
--
+- 
 
 18/11/2021
+- 
+
+
+
+
 - DTO?
 - DTO? Padrões de projeto
 - o codigo java come;a sempre no Main
