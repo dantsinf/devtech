@@ -1,9 +1,11 @@
-package com.example.webServices;
+package webServices.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
+import webServices.domain.Usuario;
+import webServices.service.UsuarioService;
 
 import java.util.List;
 
@@ -16,7 +18,7 @@ public class UsuarioController {
 	UsuarioService usuarioService;
 	@PostMapping
 	public void cadastro(@RequestBody Usuario usuario){
-		usuarioService.cadastroUsuario(usuario);
+		usuarioService.cadastraUsuario(usuario);
 	}
 	@PostMapping("/login/{user}/{senha}")
 	public String login(@PathVariable String user,@PathVariable String senha){
@@ -35,7 +37,7 @@ public class UsuarioController {
 
 	@DeleteMapping("/{user}")
 	public void delete(@PathVariable String user) {
-		usuarioService.delete(user);
+		usuarioService.delte(user);
 	}
 
 
