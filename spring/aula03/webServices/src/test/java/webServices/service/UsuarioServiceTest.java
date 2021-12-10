@@ -15,7 +15,20 @@ public class UsuarioServiceTest {
     }
 
     @Test
-    void
+    void cadastraUsuario(){
+        usuario = new Usuario("Claudio","001", TipoUsuario.LOCADOR);
+        String usuarioSalvo = usuarioService.cadastraUsuario(usuario);
+        Assertion.assertEquals(usuarioSalvo, "Usuário cadastrado com sucesso!");
+    }
+
+    @Test
+    void usuarioJaExiste(){
+        usuario = new Usuario("Claudio","001", TipoUsuario.LOCADOR);
+        String usuarioSalvo = usuarioService.cadastraUsuario(usuario);
+        Assertion.assertEquals(usuarioSalvo, "Usuário cadastrado com sucesso!");
+    }
+
+
 
 
 
