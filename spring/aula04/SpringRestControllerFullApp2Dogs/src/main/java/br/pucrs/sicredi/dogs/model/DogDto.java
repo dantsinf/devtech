@@ -11,7 +11,7 @@ public class DogDto {
         this.age = age;
     }
 
-    public int getId() {
+   public int getId() {
         return id;
     }
 
