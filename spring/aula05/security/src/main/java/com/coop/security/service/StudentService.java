@@ -2,16 +2,19 @@ package com.coop.security.service;
 
 import com.coop.security.model.Course;
 import com.coop.security.model.Student;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+@Component
 public class StudentService {
     private static List<Student> students = new ArrayList<>();
 
     static {
-        //aqui cri 3 tipos de estudante e
+        //aqui cri 3 tipos de estudante
         Course course1 = new Course("Course1", "Spring", "10 Steps",
                 Arrays.asList("Learn Maven", "Import Project", "First Example",
                         "Second Example"));
@@ -36,6 +39,7 @@ public class StudentService {
     }
 
     public List<Course> retrieveCourses(String studentId){
+        //busca dados do estudante
         Student student = retrieveStudent(studentId);
         if (student == null){
             return null;

@@ -18,6 +18,7 @@ public class StudentController {
 
     @GetMapping("/students/{studentId}/courses")
     public List<Course> retrieveCoursesForStudent(@PathVariable String studentId ){
+        System.out.println("ENTROU AQUI");
         return studentService.retrieveCourses(studentId);
     }
 
