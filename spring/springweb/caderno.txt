@@ -1,0 +1,188 @@
+09/11/2021
+trilha Spring Web
+
+- contexto Java para Web, arquitetura baseada em servi;o
+- subconjunto do framework que é o Spring
+- Arquitetura orientada a serviços, trabalhada desde 1996 
+- serviço é um softwarte que está executando na rede que vai receber uma demanda atrávez de uma mensagem
+- APi é o comando de um software
+- APIxSpring
+- Api é um comando que tu chama, a interface da aplicação
+Camada de serviços, Web Services: 
+- WebxInternet?  Internet surge antes da web
+- um monte de p´redio que tinha que se conctar entre si, agora eles se comunicam, lá em outra ciade também queriam trocar informação entre si. A gente podia conectar essas cidadas e fazer uma grande rede mundial, aí veio um monte de equipamento e protocolo que começou a ligar essas redes umas na outra e surgiu a internet, a internet é entre redes, quando a gente termina o protocolo IP isso é internet é uma conecxão entre redes, agora eu tenho um computadore conectados entre si que podem trocar dados entre si. Nesse momento não existe página web, email, só existe computadores conectados e trocando dados emtre si. Então dentro da internet se construiu o email
+- Quando tu manda uma mensagem por email, para o Lucas por exemplo, essa sai daqui e descobre que o Lucas está lá. Então dentro da internet se construiu o serviço de email, tipo pop, smtp são protocolos de trocas de mensagem.
+- http é  protocolo que a gente usa para achar um documento, trocar informa~ções entre documentos
+- WEeb serviçe é uma forma que implementar serviços dentro desse cntexto usando os protocolos
+- O que é protocolo? como vamos trocar mensagem. Se eu vou trocar mensagem com alguém a gente vai combinar uma forma de fazer isso, exemplo, tu combina com um amigo que vai entregar uma mensagem em um banquinho todo o dias às 14h da tarde e que a mensagem tem um X, então todo o dia ele busca aa mensagem e se não tiver o X ele não vai pegar para ler, protocolo é isso qualquer um que sabe ele pode pegar a carta.
+- Protocolo são regras de como vamos trocar mensagens
+- Protocolo pro web services é o HTTP.
+- Protocolo baseado em mansegem de requisição, resposta. O serviço está em estado de espera, alguém rte faz uma requisição
+- A requisição é do cliente a resposta do servidor
+- HTTP tem um conjunto de ações, quando tu constrroe uma requisição tem que falar qual a açar que ela vai ter (GET,SET, POST)
+- GET: não é obrigatório ter um corpo no request/requisição,
+- POST: precisa de corpo/terxto
+- Quando vem uma resposta de GET, POST, DELETE precisa de corpo
+- GET, POST, DELETE, PUT: Na requisição o POST e PUT tem, na resposta todos tem
+WEB SERVICES/ REST:
+- HTTP x HTTPs: no HTTP se for texto, por exemplo, e tivermos em rede de familiares a gente enxerga o texto passado, o HTTPs tem mais segurtança em criptografia, certificados o texto que passa ali, nosso protocolo é textural então o que passa é texto. A regra é a mesma são dois protocolos textuais, mas no HTTPS o texto está escopndido/guardado/certificado
+- REST é baseados no protoclo HTTP/HTTPS
+- JSON é o queridinho agora, e não mais o XML
+- Swagger
+SPRING FRAMEWEWORK, WEB SERVICES:
+-  o que são controllers? são componentes java, objetos java, ultilizados para tratar às requisições HTTP
+- Tudo que vier dos nossos clientes é codificado com mensagem HTTP
+- Spring quickstart é nosso primeiro projeto no spring, a finalidade aqui é o ambiente pronto
+- spring tools
+- pediu pra escolhermos uma IDE e seguirmos nela
+
+
+10/11/2021
+- start.spring.io/
+APÓS O GUIDE QUISKTART
+- aula passada vimos o quickstarter
+- Spring boot simplifica o projeto
+- quando vem uma resuisição, essa requisição entra em uma porta e cai em um servidor web
+- os @ são anotações que o spring framework olha para saber o que fazer
+- @springbootapplication anotação significa que a aplicação começa aqui
+EM UM EXEMPLO:
+- o /hello é uma requisição e antes dele é um método que vai trata-lo
+- o que é localhost minha máquina local
+- localhost:8080/hello vai parar no srvidor web
+- quando aparece o Hello World! significa que tem alguem fazendo GET maping hellow? sim, então entrega
+- quando dá erro foi porque o spring não achou o mapeamento
+- o método GET passa pela URL
+- value é a chave
+# quando da página não existe não tem servidor web rodando
+- format funciona igual o printf no java
+exemplo: "Hello %s", name
+- "Hello %s" é a máscara da String
+- name é as variáveis a seram impressas
+- na URL tu mexe nas chaves/variáveis
+- @getmaping("/hello") esse gatmaping  trata o valor hello
+- em value é o request também 
+- @getmaping("/hello")
+- falou do postman
+- o que aparece na URL é o formato da requisição HTTP
+- nome do parâmetro é a chave
+- aqui tu passaa chave e valor
+- pelo nome da chave tu diz que vai cair em tal coisa no java
+- GET é uma query
+PORM.xml:
+- nele configurando
+- pacote é dependÊncia
+- o pacote principal é em <artifacId>
+- a versão do java tu pode mudar em <java.version>
+ORGANIZAÇÃO DAS CLASSES:
+- package conta signigica que conta, está no pacote conta
+- pacote é uma pasta
+- o nosso código jva é colocado dentro de um pacote
+- o spring cria uma pasta fonte, main e teste
+- main tem recursos da web
+- o Maven organiza o spring assim fonte, main e teste
+-  pacote e pasta tem que ta igual no começo o spring cria e temos que ir mantendo
+- o mkdir cria pastas em disco
+- antes do windows era o DOS, não existia a parte gráfica
+- falou de comandos básicos do DOS
+- DOSxPowerShell
+- a tendência é que usamos o POwerShell daqui para frente
+POCOTES:
+- o sor gosta do Ubunto
+- WSL do windows 10 a diante, eu é um subsistema linux dentro do windows
+- Windows subsystem for Linux
+ALGUMAS ANOTAÇÕES DO SPRING:
+cONTROLLERS:
+- usamos controllers para tratar requisição HTTP
+- RestController?
+- postman perquite que postamos coisas
+- pode usar o INSOMIA
+
+11/11/2021
+- Spring MVC-Dispatcher
+- Maven carrega o servidor web
+- Podemos ter um ou mais controller
+- maven dispara o Main, o Main faz le roda nossa classe que é Spring Apliccation
+- se o Main terminou o que está rodando? o Spring
+- tu pode criar varias classes e criar um GETMAPING
+- arquitetura de serviço é como ta organizado as coisas
+- Main padrão que dispara nossa classe Spring Boot
+- o nome da classe tem que ser controller? mas comumente terminamos com controller no nome da classe
+- static é um atributo de classe
+- final não pode ser modificado
+- atomic longer me garante conflito
+CONTROLLERS:
+- controllers são classes java que tratam http
+- restcontroller trata o rest
+ANOTAÇÕES PARA MAPEAMENTO
+- restcontroller tem que ter mapeamento
+- quando tem uma requisição post temos que fazer um método para tratar POST e assim por diante
+- o HTTP só aceita texto
+- quando tu manda um objeto a prorpia Spring converte para JSON
+- os alunos relataram que nas máquinas da SICREDI o POSTMAN só funciona offline, aí começaram a usar o INSOMIA
+EXERCÍCIOS
+- a) O que é @RestController? é uma anotação que indica que uma classe é o controle REST, é atravez disso que o String sabe que a classe está preparada para receber requisição
+- b) o que é @RequestMaping? é uma forma de fazer mapeamento, tem suas anotação PostMaping, GetMaping, etc. Cada vez menos se usa RequestMapin pois é mais verboso e menor legivel. GetMapping vira um RequestMaping por "baixo dos panos"
+- quem dá signifcado a esses métodos é nós, pois eu implemento o método
+- c) @RequestParam? ele mapea o parametro que vem para request para o método. Cada parâmetro que tu quer mapear. Tudo aquilo que vem da URL vai parar no método desde que eu faça o mapeamento e o RequestParam faz isso.
+exemplo: public Greeting greeting(@RequestParam(value = "name", defaultValue = "world") Spring name)
+
+explicando o exemplo:
+1) abaixo é java
+public Greeting greeting(Spring name)
+2) tu tens que dizer para o Spring o que tu coloca no name, então adicionas a linha do RequestParam. Isso é um tipo de ingesão de indeêndencia
+public Greeting greeting(@RequestParam(value = "name", defaultValue = "world") Spring name)
+minuto 39:24
+
+outro exemplo:
+public Greeting greeting(@RequestParam(value = "name", defaultValue = "world") Spring meu_parametro)
+Não é pelo fato de uma chave ser name para o outro ser name, é o Requestparam que liga, e diz essa chave name vai cair no parâmetro que está ao lado.
+
+- o que significa ser um POST?, significa que um método não é obirgatório mas tem que ter corpo, os dados vão no corpo mas de que forma? Vão no corpo no formado JSON. o que o código espera receber são os atributos
+- QUando tu manda um número de dados maior tu manda pelo corpo não no cabeçalho
+- O que faz um PUT? Um PUT vai modificar, tu vai passar os dados e ele vai alterar os estudantes registrados(o exemplo do professor)
+- DELETE? Deleta
+- Java é uma linguagem universal
+- Lembrando: o spring carraga todos os controllers para depois fazer mapeamento 
+- nas classes de negócio terá GET e SET
+- o delete remove um registro
+- a @RestController subistitui @ResponseBody
+- Por que alguns metodos não tem @RequestParam, pois eles não tem parâmetros, ele só diz me dá os estudantes e volta tudo
+- quando as classes estão em outro pago tu tens que importar, aí tu excreve um import e o caminho
+- O PUT além do cabeçalho vem um corpo, o RequestBOry joga o JSON para dentro de Student(o exemplo do professor)
+- aqui estamos programando para web, vocês entenderam protocolo HTTP, relação do servidor com Spring  
+- controle de requisição tipo REST é com o RestController
+- Caracteristica do RestController é ter mapeamento
+- além de dados os requests podem retornar status
+- chave é atributo. valor é o conteúdo
+- GET é um método
+- variável é chave
+#quando pega valor de uma chave está mapeando
+- quem da signifcado ao metodo somos nós
+- tudo que vem da url, vai para no método
+- 
+
+18/11/2021
+- 
+
+
+
+
+- DTO?
+- DTO? Padrões de projeto
+- o codigo java come;a sempre no Main
+- main chama Spring
+- Trow = monta o objeto e devolve para quem chamou
+- request  é alguem mandou um request
+- falou sobre erros ex.: 404
+- falei que não estava me sentindo tão confiante e queria revisar. O sor me disse que era para eu serguir com as aulas e não revisar
+
+23/11/2021
+- Como o spring acha o @REstController? tem umos um servidor web que carrega nossa aplicação
+-componentes? todas as classes que estão anotadas
+- mensagem = request http
+- post, delete.. chega no servidor web, que nessa parte está sendo controlado pelo Spring
+- CORS? é um mecanismo dos navegadores,
+- Spring é a origem da requisição HTTP
+- ComponentexBin? Dentro do componente tem o bin, o componente faz mais coisas. 
+- como funciona a web? maquinas pedindo páginas e maquinas mandando página 
+- na pasta .ide, vai as configurações do IntelliJ
