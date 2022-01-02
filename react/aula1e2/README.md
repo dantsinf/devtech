@@ -2,4 +2,4 @@
 
 ### Tela: Hello World
 
-### Tela: Botão clique aqui que aciona um alert
+### Tela: Botão `clique aqui` que ativa um alert
