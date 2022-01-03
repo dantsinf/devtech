@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 
 const NameInput = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState((()=>{
+    console.log('inicial stage');
+    //aqui com getItem ele obtem/lê o que está no localStorage, para iniciar sempre com vazio
+    return window.localStorage.getItem('name') || '';
+  }));
   console.log('rendered');
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
