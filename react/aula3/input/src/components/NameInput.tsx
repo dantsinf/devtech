@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const NameInput = () => {
   const [name, setName] = useState('');
@@ -7,6 +7,11 @@ const NameInput = () => {
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     setName(event.target.value);
   }
+
+  useEffect(() => {
+    console.log('effect');
+    window.localStorage.setItem('name', name);
+    })
   
   return (
     <>
