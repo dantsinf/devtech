@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { TodoDto } from './TodoSto';
+import { TodoDto } from './TodoDto';
 
 interface TodosError {
   menssage: string,
