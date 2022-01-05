@@ -11,13 +11,20 @@ const Todos = () => {
   const [error, setError] = useState<TodosError>();
 
   useEffect(() => {
-    console.log('effect');
-    fetchTodos().then(() => console.log('fetched'));
+      console.log('effect');
+      fetchTodos().then((todos) => {
+        console.log('fetched');
+        setData(todos);
+      });
   },[]);
     
   return (
     <ul>
-      {data && data.map((todo:TodoDto) => {}) 
+      {data && data.map( (todo) => (
+          <li key={todo.id} >
+            {todo.title} - {todo.completed}
+          </li>
+      )) 
       }
     </ul>
   );
@@ -25,10 +32,10 @@ const Todos = () => {
 
 }
 
-function fetchTodos() {
+function fetchTodos(): Promise<TodoDto[]> {
   const URI = 'https://jsonplaceholder.typicode.com/todos';
   return fetch(URI)
-    .then(response => console.log(response));
+    .then(response => response.json());
 }
 
 export default Todos

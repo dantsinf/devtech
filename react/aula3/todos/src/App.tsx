@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import NameInput from './components/NameInput';
+import Todos from './components/Todos';
 
 function App() {
   return (
     <>
-      <NameInput/>
+      <h1>Todos</h1>
+      <Todos/>
     </>
   );
 }
