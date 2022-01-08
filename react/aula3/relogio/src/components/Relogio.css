@@ -1,0 +1,11 @@
+body {
+  margin: 0px;
+}
+
+/*aqui a div pricipal*/
+.principal {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
