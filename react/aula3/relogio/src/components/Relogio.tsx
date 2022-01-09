@@ -7,17 +7,20 @@ const Relogio = () => {
 
   const AtualizaHora = () => {
     tempo = new Date().toLocaleTimeString();
-    setOtempo(tempo);  
+    setOtempo(tempo); 
+    return otempo 
   }
 
   setInterval(AtualizaHora, 1000);
 
+
   return (
     <>
-      <div className='principal' >
+      <div className='principal' > 
         <h1>{otempo}</h1>
           <div>
-            <button>Pega hor</button>
+            <button onClick={()=>{console.log(otempo);
+            }}>{otempo ? 'Ligado' : 'Desligado'}</button>
           </div>
       </div>
     </>
