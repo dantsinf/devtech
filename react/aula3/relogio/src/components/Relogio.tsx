@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Relogio.css";
 
 const Relogio = () => {
@@ -12,19 +12,25 @@ const Relogio = () => {
     return otempo;
   };
 
+  /*useEffect(() => {
+    //console.log(otempo);
+    //console.log("ok");
+    document.title = "Teste" + otempo;
+  });*/
+
   setInterval(AtualizaHora, 1000);
 
   return (
     <>
       <div className="principal">
-        <h1>{ligado ? otempo : "Deligado"}</h1>
+        <h1>{ligado ? otempo : ""}</h1>
         <div>
           <button
             onClick={() => {
               setLigado(!ligado);
             }}
           >
-            {otempo ? "Ligado" : "Desligado"}
+            {ligado ? "Desliga" : "Liga"}
           </button>
         </div>
       </div>
